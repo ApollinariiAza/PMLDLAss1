@@ -2,7 +2,7 @@ version: '3'
 services:
   api:
     build:
-      context: ../..  # Build context points to the root of the project
+      context: ../..
       dockerfile: code/deployment/api/Dockerfile
     ports:
       - "8000:8000"
@@ -11,8 +11,8 @@ services:
 
   app:
     build:
-      context: ../..  # Build context points to the root of the project
-      dockerfile: code/deployment/app/Dockerfile  # Specify the correct path to the Streamlit Dockerfile
+      context: ../..
+      dockerfile: code/deployment/app/Dockerfile
     ports:
       - "8501:8501"
     depends_on:
